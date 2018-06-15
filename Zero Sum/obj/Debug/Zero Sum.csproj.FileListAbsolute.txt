@@ -1,0 +1,10 @@
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\Zero Sum\bin\Debug\Zero Sum.exe.config
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\bin\Debug\Zero Sum.exe.config
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\bin\Debug\Zero Sum.exe
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\bin\Debug\Zero Sum.pdb
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\obj\Debug\Zero_Sum.Properties.Resources.resources
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\obj\Debug\Zero Sum.csproj.GenerateResource.Cache
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\obj\Debug\Zero Sum.exe
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\obj\Debug\Zero Sum.pdb
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\obj\Debug\Zero_Sum.GameWindow.resources
+C:\Users\dbrown\Dropbox (HighRes Biosolutions)\Personal\Games\Zero Sum\Zero Sum\obj\Debug\Zero Sum.csprojResolveAssemblyReference.cache

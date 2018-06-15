@@ -1,0 +1,28 @@
+At the start of the game, everyone gets 20 coins.
+At the start of the game, goal cards are distributed randomly.
+	Target coin values <3, 10, 20, 30, >40
+One player is chosen to start the round, and play progresses clockwise
+share cards are stacked in the center in price order (0,1,2,4,8,16,32,64)
+on their turn, a player can choose to buy the topmost share card for its price, or pass
+a player must pass if they can't afford the share
+after three players have passed in a row, the round is over
+the pot is divided up evenly for each share bought; remainders are distributed to shares in order of purchase
+shares are returned to the center, and the next round begins with the player clockwise from the previous round's starter
+If the starting player passes on their first turn, the round is over and the next player starts the next round
+after three rounds (in a row?) have ended with no coins being exchanged, the game is over
+
+Players write down guesses for each other player's goal
+Players are awarded 3 points if they have met their goal
+players are awarded 2 points for each goal they correctly guessed
+the player with the most points wins
+in a tie, tied players share the win
+
+during game-play, players must clearly show coins spent during purchasing, and coins earned during payout
+during game-play, coin totals should be hidden
+goal cards must be hidden until the reveal, after all players have made their guesses
+
+errata:
+it is possible for all players to accomplish their goals in a game
+it is therefore possible to have a 5 way tie
+a perfect game awards 11 points at endgame
+1 and 10 are impossible scores

@@ -1,0 +1,76 @@
+dawntdowns@dayrep.com
+C51923
+78, 245, 697, 47, 44
+
+10 wins a lot, seemingly because they can easily lose 10 in the first round.
+Max you could gain in 1st round is 6, and then you've got one less person trying to lose, so it's harder to gain
+a more even goal numbering might be better (0,1,2,3,4,5,6)
+
+moved to 0123456 and did a lot of work
+
+42, 90, 1028, 69, 42
+28, 234, 1002, 112, 28 (3,2,1,0,-1,-2,-3)
+12,377,1000,324,12 (estimates 2)
+95,500,956,666,62 (removed overshoot prevention)
+(at some point, I prevented removal from the game)
+76,43,60,50,61 (changed to %, re-added overshoot prevention with a range (1), games seemed to go to 50 rounds)
+77,37,60,57,65 (range .9)
+80,43,57,53,56 (range .7)
+25,73,100,74,4 (re-added ability to leave game.  Bad, reverting)
+
+dumb AI is good enough, time to move on to allowing a human Player.  
+[done] At some point I may want to archive code, then do a big cleanup.  Things have gotten messy over the past few days.
+Current Road Map:  	
+	Single Player ability
+	Multi Player ability
+	dumb AI play improvement
+		instead of basing purchases off of starting gold, base off of current + estimated from purchases
+	dumb AI guessing
+	Neural Network Framework
+	Mid-level NN AI (train against dumb)
+		should I do one brain for each goal, or a single brain?
+	Advanced-level NNAI (train against mid->self)
+		same question as above
+		
+Single Player Sprint
+	[done]Cleanup
+		[done] There's multiple "checkGoal" functions across the classes.  Can these be combined?
+		[done] Make a set function for player coins (specifically so AI players can keep track of round-starting gold)
+			[todo]should this be done for more (all?) properties?
+		[todo] Disposing/memory management?
+	[done] Addition of player in Game Setup
+		[done] backfill of computer players
+		[done]in game setup, only block until user confirms player addition done, not until list full
+		[done] make it event based
+	[done]Let player select their action
+		[done]After taking first action, player always passes
+		[done]Need to display current stock to player
+		[done]Need to display goal
+		[done]Need to display current coin value to player
+		[done]make current combobox the players action at start of takingturn
+		[done]clean up displays after game
+		[done]Make it event based
+	[done]Add pauses to make the game more observable
+	[done]Let player make guesses
+	[done]instead of multiple "fetching" booleans, maybe just one? [not needed if we move to event based]
+	[done]add display of "passed for round" and "passed for game" on each turn
+	[todo]When you hit new game, the old game is still playing
+	[done]keep coin totals up-to-date
+	[done]deselect action on hittind OK;
+	[done]keep current stock display
+		[done]use event
+		[done] Bug: displays last share from previous round until new share bought
+	[done]display shares that player has bought
+		[done] bug: display doesn't update between rounds (never clears out)
+	[done]Player Display should update for current player
+		[done]Keep AI Coins, Total, and Shares hidden
+		[todo] current solution will display all human players' info
+	display round number using event
+	add ability to OK moving to the next turn
+	add tracking of simulation (and maybe also if there are any active human players) to speed up computer play
+	add and end-round screen to show net change in coins
+	Notes Section for tracking guesses
+		or allow guessing at any time, then have a confirmation at end of game
+	should Game subscribe to child events, the evoke?  AKA, should display really be subscribing to events from things other than game?
+	
+	
