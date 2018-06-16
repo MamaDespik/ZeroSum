@@ -2,7 +2,7 @@ At the start of the game, everyone gets 20 coins.
 At the start of the game, goal cards are distributed randomly.
 	Target coin values <3, 10, 20, 30, >40
 One player is chosen to start the round, and play progresses clockwise
-share cards are stacked in the center in price order (0,1,2,4,8,16,32,64)
+share cards are stacked in the center in price order (0,1,2,3,4,5,6)
 on their turn, a player can choose to buy the topmost share card for its price, or pass
 a player must pass if they can't afford the share
 after three players have passed in a row, the round is over
