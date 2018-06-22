@@ -224,7 +224,9 @@ namespace Zero_Sum
                         break;
                     default:
                         //Other goals may want to lose or gain coins based on their current value
-                        desiredReturn = Goal - CoinsAtRoundStart;
+                        int coinsAlreadyGained = 0;
+                        foreach (int boughShare in BoughtShares) coinsAlreadyGained += (int)ReturnEstimate(boughShare);
+                        desiredReturn = Goal - (CoinsAtRoundStart + coinsAlreadyGained);
                         break;
                 }
 
