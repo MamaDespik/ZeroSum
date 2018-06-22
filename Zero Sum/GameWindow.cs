@@ -127,6 +127,7 @@ namespace Zero_Sum
         void RunGameMethod()
         {
             RunGameButton.Hide();
+            CurrentShareBox.Hide();
             PlayerDisplayPanel.Show();
             CurrentShareText.Text = "0";
             CurrentShareBox.Show();
