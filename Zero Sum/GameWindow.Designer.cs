@@ -53,6 +53,8 @@
             this.PlayerNameText = new System.Windows.Forms.Label();
             this.PlayerGoalLabel = new System.Windows.Forms.Label();
             this.PlayerDisplayPanel = new System.Windows.Forms.Panel();
+            this.BoughtSharesText = new System.Windows.Forms.Label();
+            this.BoughtSharesLabel = new System.Windows.Forms.Label();
             this.PlayerCoinsText = new System.Windows.Forms.Label();
             this.PlayerGoalText = new System.Windows.Forms.Label();
             this.PlayerCoinsLabel = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@
             this.GuessesBox = new System.Windows.Forms.ComboBox();
             this.PlayerNameForGuessLabel = new System.Windows.Forms.Label();
             this.OKButton2 = new System.Windows.Forms.Button();
-            this.BoughtSharesLabel = new System.Windows.Forms.Label();
-            this.BoughtSharesText = new System.Windows.Forms.Label();
             this.PlayerDisplayPanel.SuspendLayout();
             this.DebugInfoPanel.SuspendLayout();
             this.CurrentShareBox.SuspendLayout();
@@ -187,7 +187,6 @@
             this.WinCount.Size = new System.Drawing.Size(31, 65);
             this.WinCount.TabIndex = 11;
             this.WinCount.Text = "  <3: \r\n  10: \r\n  20: \r\n  30: \r\n>40: ";
-            this.WinCount.Visible = false;
             // 
             // three
             // 
@@ -197,7 +196,6 @@
             this.three.Size = new System.Drawing.Size(13, 13);
             this.three.TabIndex = 12;
             this.three.Text = "0";
-            this.three.Visible = false;
             // 
             // ten
             // 
@@ -207,7 +205,6 @@
             this.ten.Size = new System.Drawing.Size(13, 13);
             this.ten.TabIndex = 13;
             this.ten.Text = "0";
-            this.ten.Visible = false;
             // 
             // twenty
             // 
@@ -217,7 +214,6 @@
             this.twenty.Size = new System.Drawing.Size(13, 13);
             this.twenty.TabIndex = 14;
             this.twenty.Text = "0";
-            this.twenty.Visible = false;
             // 
             // thirty
             // 
@@ -227,7 +223,6 @@
             this.thirty.Size = new System.Drawing.Size(13, 13);
             this.thirty.TabIndex = 15;
             this.thirty.Text = "0";
-            this.thirty.Visible = false;
             // 
             // forty
             // 
@@ -237,7 +232,6 @@
             this.forty.Size = new System.Drawing.Size(13, 13);
             this.forty.TabIndex = 16;
             this.forty.Text = "0";
-            this.forty.Visible = false;
             // 
             // DebugButton
             // 
@@ -268,6 +262,7 @@
             this.GameCount.Name = "GameCount";
             this.GameCount.Size = new System.Drawing.Size(0, 13);
             this.GameCount.TabIndex = 19;
+            this.GameCount.Visible = false;
             // 
             // DoneButton
             // 
@@ -332,6 +327,23 @@
             this.PlayerDisplayPanel.Size = new System.Drawing.Size(128, 84);
             this.PlayerDisplayPanel.TabIndex = 25;
             this.PlayerDisplayPanel.Visible = false;
+            // 
+            // BoughtSharesText
+            // 
+            this.BoughtSharesText.AutoSize = true;
+            this.BoughtSharesText.Location = new System.Drawing.Point(57, 67);
+            this.BoughtSharesText.Name = "BoughtSharesText";
+            this.BoughtSharesText.Size = new System.Drawing.Size(0, 13);
+            this.BoughtSharesText.TabIndex = 29;
+            // 
+            // BoughtSharesLabel
+            // 
+            this.BoughtSharesLabel.AutoSize = true;
+            this.BoughtSharesLabel.Location = new System.Drawing.Point(14, 67);
+            this.BoughtSharesLabel.Name = "BoughtSharesLabel";
+            this.BoughtSharesLabel.Size = new System.Drawing.Size(46, 13);
+            this.BoughtSharesLabel.TabIndex = 28;
+            this.BoughtSharesLabel.Text = "Shares: ";
             // 
             // PlayerCoinsText
             // 
@@ -449,23 +461,6 @@
             this.OKButton2.UseVisualStyleBackColor = true;
             this.OKButton2.Click += new System.EventHandler(this.OKButton2_Click);
             // 
-            // BoughtSharesLabel
-            // 
-            this.BoughtSharesLabel.AutoSize = true;
-            this.BoughtSharesLabel.Location = new System.Drawing.Point(14, 67);
-            this.BoughtSharesLabel.Name = "BoughtSharesLabel";
-            this.BoughtSharesLabel.Size = new System.Drawing.Size(46, 13);
-            this.BoughtSharesLabel.TabIndex = 28;
-            this.BoughtSharesLabel.Text = "Shares: ";
-            // 
-            // BoughtSharesText
-            // 
-            this.BoughtSharesText.AutoSize = true;
-            this.BoughtSharesText.Location = new System.Drawing.Point(57, 67);
-            this.BoughtSharesText.Name = "BoughtSharesText";
-            this.BoughtSharesText.Size = new System.Drawing.Size(0, 13);
-            this.BoughtSharesText.TabIndex = 29;
-            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,7 +472,6 @@
             this.Controls.Add(this.TurnPanel);
             this.Controls.Add(this.GuessingPanel);
             this.Controls.Add(this.DebugInfoPanel);
-            this.Controls.Add(this.PlayerDisplayPanel);
             this.Controls.Add(this.DoneButton);
             this.Controls.Add(this.GameCount);
             this.Controls.Add(this.StopButton);
@@ -491,6 +485,7 @@
             this.Controls.Add(this.RunGameButton);
             this.Controls.Add(this.SetupGameButton);
             this.Controls.Add(this.NewGameButton);
+            this.Controls.Add(this.PlayerDisplayPanel);
             this.Name = "GameWindow";
             this.Text = "Zero Sum";
             this.PlayerDisplayPanel.ResumeLayout(false);
