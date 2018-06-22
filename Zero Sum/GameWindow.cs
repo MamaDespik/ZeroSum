@@ -104,6 +104,7 @@ namespace Zero_Sum
             SetupGameButton.Show();
             Output.Clear();
             PlayerDisplayPanel.Hide();
+            CurrentShareBox.Hide();
             TurnPanel.Hide();
         }
 
@@ -127,7 +128,6 @@ namespace Zero_Sum
         void RunGameMethod()
         {
             RunGameButton.Hide();
-            CurrentShareBox.Hide();
             PlayerDisplayPanel.Show();
             CurrentShareText.Text = "0";
             CurrentShareBox.Show();
