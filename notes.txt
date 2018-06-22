@@ -35,7 +35,7 @@ Single Player Sprint
 		[done] There's multiple "checkGoal" functions across the classes.  Can these be combined?
 		[done] Make a set function for player coins (specifically so AI players can keep track of round-starting gold)
 			[todo]should this be done for more (all?) properties?
-		[todo] Disposing/memory management?
+		[moved to GitHub] Disposing/memory management?
 	[done] Addition of player in Game Setup
 		[done] backfill of computer players
 		[done]in game setup, only block until user confirms player addition done, not until list full
@@ -52,7 +52,7 @@ Single Player Sprint
 	[done]Let player make guesses
 	[done]instead of multiple "fetching" booleans, maybe just one? [not needed if we move to event based]
 	[done]add display of "passed for round" and "passed for game" on each turn
-	[todo]When you hit new game, the old game is still playing
+	[moved to GitHub]When you hit new game, the old game is still playing
 	[done]keep coin totals up-to-date
 	[done]deselect action on hittind OK;
 	[done]keep current stock display
@@ -62,13 +62,13 @@ Single Player Sprint
 		[done] bug: display doesn't update between rounds (never clears out)
 	[done]Player Display should update for current player
 		[done]Keep AI Coins, Total, and Shares hidden
-		[todo] current solution will display all human players' info
-	display round number using event
-	add ability to OK moving to the next turn
-	add tracking of simulation (and maybe also if there are any active human players) to speed up computer play
-	add and end-round screen to show net change in coins
-	Notes Section for tracking guesses
+		[moved to GitHub] current solution will display all human players' info
+	[moved to GitHub] display round number using event
+	[moved to GitHub] add ability to OK moving to the next turn
+	[moved to GitHub] add tracking of simulation (and maybe also if there are any active human players) to speed up computer play
+	[moved to GitHub] add and end-round screen to show net change in coins
+	[moved to GitHub] Notes Section for tracking guesses
 		or allow guessing at any time, then have a confirmation at end of game
-	should Game subscribe to child events, the evoke?  AKA, should display really be subscribing to events from things other than game?
+	[moved to GitHub] should Game subscribe to child events, the evoke?  AKA, should display really be subscribing to events from things other than game?
 	
 	
