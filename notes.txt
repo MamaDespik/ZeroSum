@@ -70,5 +70,3 @@ Single Player Sprint
 	[moved to GitHub] Notes Section for tracking guesses
 		or allow guessing at any time, then have a confirmation at end of game
 	[moved to GitHub] should Game subscribe to child events, the evoke?  AKA, should display really be subscribing to events from things other than game?
-	
-(test)
