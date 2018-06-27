@@ -111,6 +111,7 @@ namespace Zero_Sum
                 NonBlockingSleep(1);
                 Pot--; //out of the pot
                 Buyers[0].AddCoins(1); //and into your hand
+                Players.ForEach(p => p.TrackPurchases(Buyers[0].Name, 1));
                 Buyers.Add(Buyers.Pull(0)); //now go to the end of the line
             }
         }
