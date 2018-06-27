@@ -12,14 +12,15 @@ namespace Zero_Sum
     public class Player
     {
         #region Properties
-        public String Name;  //Name of the player
+        public string Name;  //Name of the player
         public int Goal; //Their assigned goal
         public int Coins = 20; //Their current number of coins
         public int Score; //Their score (at the end of the game)
-        public Boolean ActiveInRound; //If they are active in the current round
-        public Boolean ActiveInGame;  //If they are active in the game
-        public Dictionary<String, int> Guesses; //Guesses for each other player's goal
-        public int ID;  //A randomly assigned ID
+        public bool ActiveInRound; //If they are active in the current round
+        public bool ActiveInGame;  //If they are active in the game
+        public Dictionary<string, int> Guesses; //Guesses for each other player's goal
+        public List<Tuple<string, int>> Tracking;//Tracking of other player's purchases.
+        public int Id;  //A randomly assigned ID
         public List<int> BoughtShares;
 
         //public bool WaitingForAction;
@@ -41,7 +42,8 @@ namespace Zero_Sum
             ActiveInRound = true;
             ActiveInGame = true;
             Guesses = new Dictionary<string, int>();
-            ID = inID;
+            Tracking = new List<Tuple<string, int>>();
+            Id = inID;
         }
 
         #endregion
@@ -97,6 +99,12 @@ namespace Zero_Sum
             else action = ACTION_PASS_ROUND;
 
             return action;
+        }
+
+
+        public void TrackPurchases(string player, int share)
+        {
+            Tracking.Add(new Tuple<string, int>(player,share));
         }
 
         //Allow the player to guess other players goals
@@ -253,6 +261,22 @@ namespace Zero_Sum
             CoinsAtRoundStart = GetCoins();
         }
 
+        //Allow the player to guess one player's goals
+        protected override int GuessGoal(Player player)
+        {
+            int coinTotal = 20;
+            foreach (Tuple<string,int> record in Tracking)
+            {
+                if (record.Item1 == player.Name)
+                    coinTotal += record.Item2;
+            }
+
+            if (coinTotal < 7) return 3;
+            if (coinTotal < 15) return 10;
+            if (coinTotal < 25) return 20;
+            if (coinTotal < 35) return 30;
+            return 40;
+        }
         #endregion
 
         #region Unique Methods
@@ -288,14 +312,6 @@ namespace Zero_Sum
 
             return estimate;
         }
-
-        //Allow the player to guess one player's goals
-        protected override int GuessGoal(Player player)
-        {
-            //TODO dumbAI players currently don't guess goals
-            return -1;
-        }
-
         #endregion
     }
 
