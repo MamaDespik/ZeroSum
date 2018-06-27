@@ -118,7 +118,7 @@ namespace Zero_Sum
         protected virtual void SetPlayerOrder()
         {
             //sort by randomly assigned ID
-            Players.Sort((x, y) => x.ID - y.ID);
+            Players.Sort((x, y) => x.Id - y.Id);
 
             //Write the order to the console
             string playerList = "";
@@ -272,6 +272,7 @@ namespace Zero_Sum
         void PostSharePurchase(Player buyingPlayer, int shareValue)
         {
             OnShareBought?.Invoke(buyingPlayer, shareValue);
+            Players.ForEach(x => x.TrackPurchases(buyingPlayer.Name,-shareValue));
         }
 
         void PostNewShare(int shareValue)
