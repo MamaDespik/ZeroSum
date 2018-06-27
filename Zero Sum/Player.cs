@@ -268,8 +268,13 @@ namespace Zero_Sum
             foreach (Tuple<string,int> record in Tracking)
             {
                 if (record.Item1 == player.Name)
-                    coinTotal += record.Item2;
+                {
+                    //AI track purchases perfectly, so this artificially adds some uncertainty to their guessing
+                    int badness = RANDOM.Next(-1, 2);
+                    coinTotal += record.Item2 + badness;
+                }
             }
+            
 
             if (coinTotal < 7) return 3;
             if (coinTotal < 15) return 10;
